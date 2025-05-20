@@ -1,0 +1,1156 @@
+
+
+    <html>
+
+    <head>
+
+        <meta charset='utf-8'>
+
+        <style>
+
+            body { font-family: Arial, sans-serif; }
+
+            .table-wrapper {
+
+                overflow-x: auto;
+
+                max-width: 100%;
+
+                border: 1px solid #ddd;
+
+            }
+
+            table {
+
+                border-collapse: collapse;
+
+                min-width: 1200px;
+
+            }
+
+            th, td {
+
+                border: 1px solid #ccc;
+
+                padding: 10px;
+
+                text-align: center;
+
+                vertical-align: top;
+
+                white-space: nowrap;
+
+            }
+
+            img.thumb {
+
+                width: 120px;
+
+                height: 120px;
+
+                object-fit: contain;
+
+                cursor: zoom-in;
+
+                transition: transform 0.2s ease;
+
+            }
+
+            .xmark {
+
+                color: #e74c3c;
+
+                font-size: 20px;
+
+                font-weight: bold;
+
+            }
+
+
+
+            /* 固定列样式 */
+
+            th.sticky, td.sticky {
+
+                position: sticky;
+
+                left: 0;
+
+                background-color: #f9f9f9;
+
+                z-index: 1;
+
+            }
+
+            td.sticky-2, th.sticky-2 {
+
+                position: sticky;
+
+                left: 120px;
+
+                background-color: #f9f9f9;
+
+                z-index: 1;
+
+            }
+
+
+
+            /* Modal 样式 */
+
+            .modal {
+
+                display: none;
+
+                position: fixed;
+
+                z-index: 9999;
+
+                left: 0; top: 0;
+
+                width: 100%; height: 100%;
+
+                background-color: rgba(0,0,0,0.8);
+
+                overflow: hidden;
+
+                cursor: grab;
+
+            }
+
+            .modal-content {
+
+                position: absolute;
+
+                top: 50%;
+
+                left: 50%;
+
+                max-width: none;
+
+                transform: translate(-50%, -50%) scale(1);
+
+                transform-origin: center center;
+
+            }
+
+            .modal-close {
+
+                position: absolute;
+
+                top: 20px; right: 40px;
+
+                font-size: 40px;
+
+                color: white;
+
+                cursor: pointer;
+
+                z-index: 99999;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h2>🧠 商品卖点对比分析图</h2>
+
+        <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th class="sticky">卖点</th >
+
+                    <th class="sticky-2">命中数</th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0CF9S313H" target="_blank">B0CF9S313H</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0CQR7NF1M" target="_blank">B0CQR7NF1M</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0CWGQ178M" target="_blank">B0CWGQ178M</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0CWLRT2LH" target="_blank">B0CWLRT2LH</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0D9XWX6LK" target="_blank">B0D9XWX6LK</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DCBHMC1C" target="_blank">B0DCBHMC1C</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DDQL7PVM" target="_blank">B0DDQL7PVM</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DDVNSYNM" target="_blank">B0DDVNSYNM</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DGXDSPNL" target="_blank">B0DGXDSPNL</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DJ32Y122" target="_blank">B0DJ32Y122</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DPM88SVY" target="_blank">B0DPM88SVY</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DR8PD3N1" target="_blank">B0DR8PD3N1</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0F4K6RBCY" target="_blank">B0F4K6RBCY</a></th>
+
+                    
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                
+
+                <tr>
+
+                    <td class="sticky">省空间压缩袋</td>
+
+                    <td class="sticky-2"><strong>13</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CF9S313H_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CQR7NF1M_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CWGQ178M_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CWLRT2LH_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D9XWX6LK_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DCBHMC1C_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DDQL7PVM_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DDVNSYNM_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DGXDSPNL_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DJ32Y122_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DPM88SVY_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DR8PD3N1_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0F4K6RBCY_省空间压缩袋.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">旅行收纳包</td>
+
+                    <td class="sticky-2"><strong>13</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CF9S313H_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CQR7NF1M_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CWGQ178M_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CWLRT2LH_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D9XWX6LK_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DCBHMC1C_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DDQL7PVM_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DDVNSYNM_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DGXDSPNL_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DJ32Y122_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DPM88SVY_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DR8PD3N1_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0F4K6RBCY_旅行收纳包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">高效防水材料</td>
+
+                    <td class="sticky-2"><strong>12</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CQR7NF1M_高效防水材料.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CWGQ178M_高效防水材料.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CWLRT2LH_高效防水材料.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D9XWX6LK_高效防水材料.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DCBHMC1C_高效防水材料.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DDQL7PVM_高效防水材料.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DDVNSYNM_高效防水材料.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DGXDSPNL_高效防水材料.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DJ32Y122_高效防水材料.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DPM88SVY_高效防水材料.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DR8PD3N1_高效防水材料.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0F4K6RBCY_高效防水材料.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">智能真空泵</td>
+
+                    <td class="sticky-2"><strong>8</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CF9S313H_智能真空泵.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CQR7NF1M_智能真空泵.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DCBHMC1C_智能真空泵.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DDQL7PVM_智能真空泵.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DGXDSPNL_智能真空泵.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DJ32Y122_智能真空泵.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DPM88SVY_智能真空泵.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DR8PD3N1_智能真空泵.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">多功能背包</td>
+
+                    <td class="sticky-2"><strong>5</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DCBHMC1C_多功能背包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DDQL7PVM_多功能背包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DJ32Y122_多功能背包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DPM88SVY_多功能背包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DR8PD3N1_多功能背包.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+            </tbody>
+
+        </table>
+
+        </div>
+
+
+
+        <!-- Modal 放大图 -->
+
+        <div id="imgModal" class="modal" onmousedown="startDrag(event)" onmouseup="stopDrag()" onmousemove="doDrag(event)">
+
+            <span class="modal-close" onclick="hideModal()">×</span>
+
+            <img class="modal-content" id="modalImage">
+
+        </div>
+
+
+
+        <script>
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImage");
+
+let scale = 1;
+let dragging = false;
+let startX = 0, startY = 0;
+let offsetX = 0, offsetY = 0;
+
+function showModal(src) {
+    modal.style.display = "block";
+    modalImg.src = src;
+    scale = 1;
+    offsetX = 0;
+    offsetY = 0;
+    updateTransform();
+}
+
+function hideModal() {
+    modal.style.display = "none";
+}
+
+function updateTransform() {
+    modalImg.style.transform = `translate(-50%, -50%) translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+}
+
+// ✅ 鼠标滚轮缩放
+modalImg.addEventListener("wheel", function(event) {
+    event.preventDefault();
+    scale *= (event.deltaY < 0) ? 1.1 : 0.9;
+    updateTransform();
+});
+
+// ✅ 鼠标拖动图片本身
+modalImg.addEventListener("mousedown", function(e) {
+    e.preventDefault();
+    dragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    modal.style.cursor = "grabbing";
+});
+
+window.addEventListener("mouseup", function() {
+    dragging = false;
+    modal.style.cursor = "grab";
+});
+
+window.addEventListener("mousemove", function(e) {
+    if (!dragging) return;
+    offsetX += e.clientX - startX;
+    offsetY += e.clientY - startY;
+    startX = e.clientX;
+    startY = e.clientY;
+    updateTransform();
+});
+</script>
+
+    </body>
+
+    </html>
+
+    
