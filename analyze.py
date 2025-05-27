@@ -1,5 +1,6 @@
 from dashscope import MultiModalConversation
 from config import API_KEY
+import re
 
 def get_sell_points_from_all_images(image_paths):
     """对一组拼图图像统一识别出卖点关键词维度"""
@@ -8,8 +9,17 @@ def get_sell_points_from_all_images(image_paths):
             "role": "user",
             "content": [
                 *[{"image": path} for path in image_paths],
-                {"text": "请你首先确定这些图片是属于什么种类的商品，然后对这些图片中的商品进行统一卖点归纳分析，总结它们所具备的合理的商品卖点维度（如 TSA密码锁、万向轮、扩容层、USB接口等），返回精炼且合理的中文关键词列表，"
-                         "关键词不超过7个且每个关键字长度不超过5个字，勿返回句子。"}
+                {"text": "你是一位专业的 Amazon 商品图片卖点提炼专家。\n\n"
+        "请依次完成以下任务：\n"
+        "1. 根据所提供的多张商品图片，判断它们是否属于同一类商品（如行李箱、耳机、电脑包等）；\n"
+        "2. 统一对这类商品的图片进行分析，从图中总结出清晰可见、显著体现的卖点维度（如 TSA锁、万向轮、扩容层、USB接口等）；\n"
+        "3. 仅返回这类商品图片中反复出现、共同具备、且在图像中视觉上容易识别的卖点关键词。\n\n"
+        "⚠️ 要求：\n"
+        "- 返回 **不超过7个** 的中文关键词；\n"
+        "- 每个关键词 **不超过8个字**；\n"
+        "- 不要返回句子、解释或编号；\n"
+        "- 输出格式仅为关键词组成的列表（用顿号或逗号分隔）。\n\n"
+        "示例输出格式（仅示例）：USB接口、万向轮、加厚杆、扩容层"}
             ]
         }
     ]
@@ -20,14 +30,17 @@ def get_sell_points_from_all_images(image_paths):
             messages=messages
         )
         result = response.output.choices[0].message.content[0]["text"]
-        # ✅ 新增对中文分号 "；" 的拆分支持
-        result = result.replace("；", "\n").replace("。", "\n").replace("，", "\n").replace(",", "\n")
-        lines = [line.strip("- ").strip() for line in result.splitlines() if line.strip()]
+
+        # ✅ 使用正则分隔关键词（支持顿号、逗号、中英文逗号）
+        lines = re.split(r"[，,、\s]+", result)
+        lines = [line.strip() for line in lines if line.strip()]
+
         return lines
 
     except Exception as e:
         print(f"❌ 多图卖点维度分析失败: {e}")
         return []
+
 
 def classify_image_by_points(image_path, point_list):
     """根据统一卖点维度，判断某个子图是否匹配相关卖点，仅返回关键词"""

@@ -1,0 +1,3172 @@
+
+
+    <html>
+
+    <head>
+
+        <meta charset='utf-8'>
+
+        <style>
+
+            body { font-family: Arial, sans-serif; }
+
+            .table-wrapper {
+
+                overflow-x: auto;
+
+                max-width: 100%;
+
+                border: 1px solid #ddd;
+
+            }
+
+            table {
+
+                border-collapse: collapse;
+
+                min-width: 1200px;
+
+            }
+
+            th, td {
+
+                border: 1px solid #ccc;
+
+                padding: 10px;
+
+                text-align: center;
+
+                vertical-align: top;
+
+                white-space: nowrap;
+
+            }
+
+            img.thumb {
+
+                width: 120px;
+
+                height: 120px;
+
+                object-fit: contain;
+
+                cursor: zoom-in;
+
+                transition: transform 0.2s ease;
+
+            }
+
+            .xmark {
+
+                color: #e74c3c;
+
+                font-size: 20px;
+
+                font-weight: bold;
+
+            }
+
+
+
+            /* 固定列样式 */
+
+            th.sticky, td.sticky {
+
+                position: sticky;
+
+                left: 0;
+
+                background-color: #f9f9f9;
+
+                z-index: 1;
+
+            }
+
+            td.sticky-2, th.sticky-2 {
+
+                position: sticky;
+
+                left: 120px;
+
+                background-color: #f9f9f9;
+
+                z-index: 1;
+
+            }
+
+
+
+            /* Modal 样式 */
+
+            .modal {
+
+                display: none;
+
+                position: fixed;
+
+                z-index: 9999;
+
+                left: 0; top: 0;
+
+                width: 100%; height: 100%;
+
+                background-color: rgba(0,0,0,0.8);
+
+                overflow: hidden;
+
+                cursor: grab;
+
+            }
+
+            .modal-content {
+
+                position: absolute;
+
+                top: 50%;
+
+                left: 50%;
+
+                max-width: none;
+
+                transform: translate(-50%, -50%) scale(1);
+
+                transform-origin: center center;
+
+            }
+
+            .modal-close {
+
+                position: absolute;
+
+                top: 20px; right: 40px;
+
+                font-size: 40px;
+
+                color: white;
+
+                cursor: pointer;
+
+                z-index: 99999;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h2>🧠 商品卖点对比分析图</h2>
+
+        <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th class="sticky">卖点</th >
+
+                    <th class="sticky-2">命中数</th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B08RBNSV12" target="_blank">B08RBNSV12</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B09JFTHMQ3" target="_blank">B09JFTHMQ3</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B09PNK4DTM" target="_blank">B09PNK4DTM</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B09TP8QF6N" target="_blank">B09TP8QF6N</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B09X9Z7RQ8" target="_blank">B09X9Z7RQ8</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0B95V9CBM" target="_blank">B0B95V9CBM</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0BL2HX3P5" target="_blank">B0BL2HX3P5</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0CDL98NKM" target="_blank">B0CDL98NKM</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0CLXGPBZD" target="_blank">B0CLXGPBZD</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0CP7QVT4N" target="_blank">B0CP7QVT4N</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0D17RQMGV" target="_blank">B0D17RQMGV</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0D53RH9T9" target="_blank">B0D53RH9T9</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0D5B2HSLV" target="_blank">B0D5B2HSLV</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0D761RV51" target="_blank">B0D761RV51</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DGSNSPRW" target="_blank">B0DGSNSPRW</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DJPNQ1B5" target="_blank">B0DJPNQ1B5</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DK1FTRV4" target="_blank">B0DK1FTRV4</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DK1HJBB8" target="_blank">B0DK1HJBB8</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DN9QYMNF" target="_blank">B0DN9QYMNF</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DN9VJS9V" target="_blank">B0DN9VJS9V</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DNMNKRWZ" target="_blank">B0DNMNKRWZ</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DNMP5DY8" target="_blank">B0DNMP5DY8</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DNMTNP3R" target="_blank">B0DNMTNP3R</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DQL5T291" target="_blank">B0DQL5T291</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DY4PLGT3" target="_blank">B0DY4PLGT3</a></th>
+
+                    
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                
+
+                <tr>
+
+                    <td class="sticky">防水外壳</td>
+
+                    <td class="sticky-2"><strong>25</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B08RBNSV12_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09JFTHMQ3_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09PNK4DTM_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09TP8QF6N_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09X9Z7RQ8_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BL2HX3P5_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CDL98NKM_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CLXGPBZD_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CP7QVT4N_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D17RQMGV_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RH9T9_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D5B2HSLV_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D761RV51_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DGSNSPRW_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DJPNQ1B5_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1FTRV4_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1HJBB8_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9QYMNF_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9VJS9V_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMNKRWZ_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMTNP3R_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DQL5T291_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DY4PLGT3_防水外壳.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">大孔设计</td>
+
+                    <td class="sticky-2"><strong>25</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B08RBNSV12_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09JFTHMQ3_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09PNK4DTM_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09TP8QF6N_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09X9Z7RQ8_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BL2HX3P5_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CDL98NKM_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CLXGPBZD_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CP7QVT4N_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D17RQMGV_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RH9T9_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D5B2HSLV_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D761RV51_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DGSNSPRW_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DJPNQ1B5_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1FTRV4_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1HJBB8_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9QYMNF_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9VJS9V_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMNKRWZ_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMTNP3R_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DQL5T291_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DY4PLGT3_大孔设计.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">安全指示灯</td>
+
+                    <td class="sticky-2"><strong>25</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B08RBNSV12_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09JFTHMQ3_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09PNK4DTM_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09TP8QF6N_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09X9Z7RQ8_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BL2HX3P5_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CDL98NKM_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CLXGPBZD_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CP7QVT4N_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D17RQMGV_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RH9T9_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D5B2HSLV_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D761RV51_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DGSNSPRW_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DJPNQ1B5_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1FTRV4_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1HJBB8_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9QYMNF_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9VJS9V_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMNKRWZ_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMTNP3R_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DQL5T291_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DY4PLGT3_安全指示灯.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">发电机插头</td>
+
+                    <td class="sticky-2"><strong>24</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B08RBNSV12_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09PNK4DTM_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09TP8QF6N_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09X9Z7RQ8_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BL2HX3P5_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CDL98NKM_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CLXGPBZD_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CP7QVT4N_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D17RQMGV_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RH9T9_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D5B2HSLV_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D761RV51_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DGSNSPRW_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DJPNQ1B5_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1FTRV4_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1HJBB8_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9QYMNF_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9VJS9V_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMNKRWZ_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMTNP3R_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DQL5T291_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DY4PLGT3_发电机插头.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">电源线插座</td>
+
+                    <td class="sticky-2"><strong>24</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B08RBNSV12_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09JFTHMQ3_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09PNK4DTM_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09TP8QF6N_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09X9Z7RQ8_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BL2HX3P5_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CDL98NKM_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CLXGPBZD_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D17RQMGV_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RH9T9_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D5B2HSLV_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D761RV51_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DGSNSPRW_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DJPNQ1B5_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1FTRV4_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1HJBB8_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9QYMNF_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9VJS9V_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMNKRWZ_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMTNP3R_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DQL5T291_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DY4PLGT3_电源线插座.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">坚固耐用</td>
+
+                    <td class="sticky-2"><strong>22</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B08RBNSV12_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09JFTHMQ3_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09PNK4DTM_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09TP8QF6N_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BL2HX3P5_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CDL98NKM_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CLXGPBZD_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CP7QVT4N_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D17RQMGV_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RH9T9_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D5B2HSLV_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D761RV51_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DGSNSPRW_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DJPNQ1B5_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1FTRV4_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1HJBB8_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9QYMNF_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9VJS9V_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMNKRWZ_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMTNP3R_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DY4PLGT3_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">易安装</td>
+
+                    <td class="sticky-2"><strong>16</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B08RBNSV12_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09JFTHMQ3_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09TP8QF6N_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BL2HX3P5_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CP7QVT4N_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D17RQMGV_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RH9T9_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D5B2HSLV_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DJPNQ1B5_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1FTRV4_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DK1HJBB8_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMNKRWZ_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMTNP3R_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DY4PLGT3_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">防尘盖子</td>
+
+                    <td class="sticky-2"><strong>12</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09JFTHMQ3_防尘盖子.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09TP8QF6N_防尘盖子.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09X9Z7RQ8_防尘盖子.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_防尘盖子.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D17RQMGV_防尘盖子.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RH9T9_防尘盖子.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D5B2HSLV_防尘盖子.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D761RV51_防尘盖子.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DN9QYMNF_防尘盖子.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMNKRWZ_防尘盖子.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_防尘盖子.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMTNP3R_防尘盖子.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">高功率连接器</td>
+
+                    <td class="sticky-2"><strong>8</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09JFTHMQ3_高功率连接器.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09PNK4DTM_高功率连接器.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BL2HX3P5_高功率连接器.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CLXGPBZD_高功率连接器.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D5B2HSLV_高功率连接器.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_高功率连接器.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMTNP3R_高功率连接器.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DY4PLGT3_高功率连接器.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+            </tbody>
+
+        </table>
+
+        </div>
+
+
+
+        <!-- Modal 放大图 -->
+
+        <div id="imgModal" class="modal" onmousedown="startDrag(event)" onmouseup="stopDrag()" onmousemove="doDrag(event)">
+
+            <span class="modal-close" onclick="hideModal()">×</span>
+
+            <img class="modal-content" id="modalImage">
+
+        </div>
+
+
+
+        <script>
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImage");
+
+let scale = 1;
+let dragging = false;
+let startX = 0, startY = 0;
+let offsetX = 0, offsetY = 0;
+
+function showModal(src) {
+    modal.style.display = "block";
+    modalImg.src = src;
+    scale = 1;
+    offsetX = 0;
+    offsetY = 0;
+    updateTransform();
+}
+
+function hideModal() {
+    modal.style.display = "none";
+}
+
+function updateTransform() {
+    modalImg.style.transform = `translate(-50%, -50%) translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+}
+
+// ✅ 鼠标滚轮缩放
+modalImg.addEventListener("wheel", function(event) {
+    event.preventDefault();
+    scale *= (event.deltaY < 0) ? 1.1 : 0.9;
+    updateTransform();
+});
+
+// ✅ 鼠标拖动图片本身
+modalImg.addEventListener("mousedown", function(e) {
+    e.preventDefault();
+    dragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    modal.style.cursor = "grabbing";
+});
+
+window.addEventListener("mouseup", function() {
+    dragging = false;
+    modal.style.cursor = "grab";
+});
+
+window.addEventListener("mousemove", function(e) {
+    if (!dragging) return;
+    offsetX += e.clientX - startX;
+    offsetY += e.clientY - startY;
+    startX = e.clientX;
+    startY = e.clientY;
+    updateTransform();
+});
+</script>
+
+    </body>
+
+    </html>
+
+    
