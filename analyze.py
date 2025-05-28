@@ -9,7 +9,7 @@ def get_sell_points_from_all_images(image_paths):
             "role": "user",
             "content": [
                 *[{"image": path} for path in image_paths],
-                {"text": "你是一位专业的 Amazon 商品图片卖点提炼专家,这次的商品组图是高尔夫车充电器。\n\n"
+                {"text": "你是一位专业的 Amazon 商品图片卖点提炼专家,这次的商品组图是发电机配件(电线、插头和适配器)。\n\n"
         "请依次完成以下任务：\n"
         "1. 统一对这类商品的图片进行分析，从图中总结出清晰可见、显著体现的卖点维度（如 TSA锁、万向轮、扩容层、USB接口等）；\n"
         "2. 仅返回这类商品图片中反复出现、共同具备、且在图像中视觉上容易识别的卖点关键词。\n\n"

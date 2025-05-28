@@ -1,0 +1,1140 @@
+
+
+    <html>
+
+    <head>
+
+        <meta charset='utf-8'>
+
+        <style>
+
+            body { font-family: Arial, sans-serif; }
+
+            .table-wrapper {
+
+                overflow-x: auto;
+
+                max-width: 100%;
+
+                border: 1px solid #ddd;
+
+            }
+
+            table {
+
+                border-collapse: collapse;
+
+                min-width: 1200px;
+
+            }
+
+            th, td {
+
+                border: 1px solid #ccc;
+
+                padding: 10px;
+
+                text-align: center;
+
+                vertical-align: top;
+
+                white-space: nowrap;
+
+            }
+
+            img.thumb {
+
+                width: 120px;
+
+                height: 120px;
+
+                object-fit: contain;
+
+                cursor: zoom-in;
+
+                transition: transform 0.2s ease;
+
+            }
+
+            .xmark {
+
+                color: #e74c3c;
+
+                font-size: 20px;
+
+                font-weight: bold;
+
+            }
+
+
+
+            /* 固定列样式 */
+
+            th.sticky, td.sticky {
+
+                position: sticky;
+
+                left: 0;
+
+                background-color: #f9f9f9;
+
+                z-index: 1;
+
+            }
+
+            td.sticky-2, th.sticky-2 {
+
+                position: sticky;
+
+                left: 120px;
+
+                background-color: #f9f9f9;
+
+                z-index: 1;
+
+            }
+
+
+
+            /* Modal 样式 */
+
+            .modal {
+
+                display: none;
+
+                position: fixed;
+
+                z-index: 9999;
+
+                left: 0; top: 0;
+
+                width: 100%; height: 100%;
+
+                background-color: rgba(0,0,0,0.8);
+
+                overflow: hidden;
+
+                cursor: grab;
+
+            }
+
+            .modal-content {
+
+                position: absolute;
+
+                top: 50%;
+
+                left: 50%;
+
+                max-width: none;
+
+                transform: translate(-50%, -50%) scale(1);
+
+                transform-origin: center center;
+
+            }
+
+            .modal-close {
+
+                position: absolute;
+
+                top: 20px; right: 40px;
+
+                font-size: 40px;
+
+                color: white;
+
+                cursor: pointer;
+
+                z-index: 99999;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h2>🧠 商品卖点对比分析图</h2>
+
+        <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th class="sticky">卖点</th >
+
+                    <th class="sticky-2">命中数</th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B08RBNSV12" target="_blank">B08RBNSV12</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B09X9Z7RQ8" target="_blank">B09X9Z7RQ8</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0B95V9CBM" target="_blank">B0B95V9CBM</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0BSLG71YC" target="_blank">B0BSLG71YC</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0CLXGPBZD" target="_blank">B0CLXGPBZD</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0CN34LFVF" target="_blank">B0CN34LFVF</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0CXX3JSV8" target="_blank">B0CXX3JSV8</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0D53RT4HC" target="_blank">B0D53RT4HC</a></th>
+
+                    
+
+                    <th><a href="https://www.amazon.com/dp/B0DNMP5DY8" target="_blank">B0DNMP5DY8</a></th>
+
+                    
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                
+
+                <tr>
+
+                    <td class="sticky">防水防尘</td>
+
+                    <td class="sticky-2"><strong>9</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B08RBNSV12_防水防尘.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09X9Z7RQ8_防水防尘.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_防水防尘.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BSLG71YC_防水防尘.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CLXGPBZD_防水防尘.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CN34LFVF_防水防尘.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CXX3JSV8_防水防尘.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RT4HC_防水防尘.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_防水防尘.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">坚固耐用</td>
+
+                    <td class="sticky-2"><strong>9</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B08RBNSV12_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09X9Z7RQ8_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BSLG71YC_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CLXGPBZD_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CN34LFVF_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CXX3JSV8_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RT4HC_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_坚固耐用.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">预钻孔位</td>
+
+                    <td class="sticky-2"><strong>8</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B08RBNSV12_预钻孔位.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09X9Z7RQ8_预钻孔位.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_预钻孔位.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BSLG71YC_预钻孔位.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CN34LFVF_预钻孔位.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CXX3JSV8_预钻孔位.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RT4HC_预钻孔位.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_预钻孔位.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">易安装</td>
+
+                    <td class="sticky-2"><strong>7</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B08RBNSV12_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09X9Z7RQ8_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BSLG71YC_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CN34LFVF_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RT4HC_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_易安装.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">高导电性</td>
+
+                    <td class="sticky-2"><strong>6</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B09X9Z7RQ8_高导电性.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BSLG71YC_高导电性.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CN34LFVF_高导电性.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CXX3JSV8_高导电性.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RT4HC_高导电性.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0DNMP5DY8_高导电性.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">耐高温</td>
+
+                    <td class="sticky-2"><strong>4</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_耐高温.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CLXGPBZD_耐高温.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CN34LFVF_耐高温.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0D53RT4HC_耐高温.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+                <tr>
+
+                    <td class="sticky">抗老化</td>
+
+                    <td class="sticky-2"><strong>3</strong></td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0B95V9CBM_抗老化.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0BSLG71YC_抗老化.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <img class="thumb" src="joined_images\B0CN34LFVF_抗老化.jpg" onclick="showModal(this.src)" />
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                    <td>
+
+                        
+
+                        <span class="xmark">❌</span>
+
+                        
+
+                    </td>
+
+                    
+
+                </tr>
+
+                
+
+            </tbody>
+
+        </table>
+
+        </div>
+
+
+
+        <!-- Modal 放大图 -->
+
+        <div id="imgModal" class="modal" onmousedown="startDrag(event)" onmouseup="stopDrag()" onmousemove="doDrag(event)">
+
+            <span class="modal-close" onclick="hideModal()">×</span>
+
+            <img class="modal-content" id="modalImage">
+
+        </div>
+
+
+
+        <script>
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImage");
+
+let scale = 1;
+let dragging = false;
+let startX = 0, startY = 0;
+let offsetX = 0, offsetY = 0;
+
+function showModal(src) {
+    modal.style.display = "block";
+    modalImg.src = src;
+    scale = 1;
+    offsetX = 0;
+    offsetY = 0;
+    updateTransform();
+}
+
+function hideModal() {
+    modal.style.display = "none";
+}
+
+function updateTransform() {
+    modalImg.style.transform = `translate(-50%, -50%) translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+}
+
+// ✅ 鼠标滚轮缩放
+modalImg.addEventListener("wheel", function(event) {
+    event.preventDefault();
+    scale *= (event.deltaY < 0) ? 1.1 : 0.9;
+    updateTransform();
+});
+
+// ✅ 鼠标拖动图片本身
+modalImg.addEventListener("mousedown", function(e) {
+    e.preventDefault();
+    dragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    modal.style.cursor = "grabbing";
+});
+
+window.addEventListener("mouseup", function() {
+    dragging = false;
+    modal.style.cursor = "grab";
+});
+
+window.addEventListener("mousemove", function(e) {
+    if (!dragging) return;
+    offsetX += e.clientX - startX;
+    offsetY += e.clientY - startY;
+    startX = e.clientX;
+    startY = e.clientY;
+    updateTransform();
+});
+</script>
+
+    </body>
+
+    </html>
+
+    
